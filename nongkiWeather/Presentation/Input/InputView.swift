@@ -42,6 +42,20 @@ struct InputView: View {
             Spacer()
         }
         .padding(20)
+        .onAppear(perform: {
+            Task {
+                do {
+                    let provinsi = try await DaerahRemoteDataSource().getAllProvinsi()
+                    print("Ini Provinsi", provinsi)
+                } catch DaerahError.invalidURL {
+                    print("Invalid URL")
+                } catch DaerahError.invalidResponse {
+                    print("Invalid Response")
+                } catch DaerahError.invalidData {
+                    print("Invalid Data")
+                }
+            }
+        })
     }
 }
 

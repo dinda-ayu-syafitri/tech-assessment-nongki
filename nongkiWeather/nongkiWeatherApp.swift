@@ -12,7 +12,7 @@ struct nongkiWeatherApp: App {
     var body: some Scene {
         WindowGroup {
             RouterView {
-                ContentView()
+                InputView()
             }
         }
     }

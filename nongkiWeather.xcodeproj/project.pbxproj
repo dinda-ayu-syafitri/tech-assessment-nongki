@@ -16,6 +16,12 @@
 		204078352CFF4E42002147EC /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078342CFF4E42002147EC /* RouterView.swift */; };
 		204078382CFF4EE1002147EC /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078372CFF4EE1002147EC /* InputView.swift */; };
 		2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040783C2CFF5E84002147EC /* SearchableDropdown.swift */; };
+		204078422CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078412CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift */; };
+		204078452CFF6A65002147EC /* ProvinsiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078442CFF6A65002147EC /* ProvinsiModel.swift */; };
+		204078472CFF6B08002147EC /* KotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078462CFF6B08002147EC /* KotaModel.swift */; };
+		204078492CFF6B69002147EC /* DaerahRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078482CFF6B69002147EC /* DaerahRemoteDataSource.swift */; };
+		2040784D2CFF6CEA002147EC /* DaerahErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040784C2CFF6CEA002147EC /* DaerahErrorEnum.swift */; };
+		2040784F2CFF74DB002147EC /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040784E2CFF74DB002147EC /* APIResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		204078342CFF4E42002147EC /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 		204078372CFF4EE1002147EC /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
 		2040783C2CFF5E84002147EC /* SearchableDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDropdown.swift; sourceTree = "<group>"; };
+		204078412CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahRemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
+		204078442CFF6A65002147EC /* ProvinsiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinsiModel.swift; sourceTree = "<group>"; };
+		204078462CFF6B08002147EC /* KotaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotaModel.swift; sourceTree = "<group>"; };
+		204078482CFF6B69002147EC /* DaerahRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahRemoteDataSource.swift; sourceTree = "<group>"; };
+		2040784C2CFF6CEA002147EC /* DaerahErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahErrorEnum.swift; sourceTree = "<group>"; };
+		2040784E2CFF74DB002147EC /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,7 @@
 		204078222CFF4CCF002147EC /* nongkiWeather */ = {
 			isa = PBXGroup;
 			children = (
+				2040783E2CFF68E0002147EC /* Data */,
 				2040782D2CFF4D85002147EC /* Domain */,
 				204078292CFF4D11002147EC /* Presentation */,
 				204078272CFF4CD9002147EC /* Common */,
@@ -117,6 +130,7 @@
 		2040782E2CFF4D8D002147EC /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				204078432CFF6A38002147EC /* Model */,
 				2040782F2CFF4D95002147EC /* Enum */,
 			);
 			path = Entities;
@@ -126,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				204078302CFF4DAA002147EC /* RouteEnum.swift */,
+				2040784C2CFF6CEA002147EC /* DaerahErrorEnum.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -144,6 +159,41 @@
 				2040783C2CFF5E84002147EC /* SearchableDropdown.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		2040783E2CFF68E0002147EC /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2040783F2CFF68EC002147EC /* DataSource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2040783F2CFF68EC002147EC /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				204078402CFF68FE002147EC /* Remote */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		204078402CFF68FE002147EC /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				204078412CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift */,
+				204078482CFF6B69002147EC /* DaerahRemoteDataSource.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		204078432CFF6A38002147EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				204078442CFF6A65002147EC /* ProvinsiModel.swift */,
+				204078462CFF6B08002147EC /* KotaModel.swift */,
+				2040784E2CFF74DB002147EC /* APIResponse.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,9 +273,15 @@
 				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
 				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
 				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,
+				204078472CFF6B08002147EC /* KotaModel.swift in Sources */,
+				204078492CFF6B69002147EC /* DaerahRemoteDataSource.swift in Sources */,
 				204078382CFF4EE1002147EC /* InputView.swift in Sources */,
+				2040784F2CFF74DB002147EC /* APIResponse.swift in Sources */,
+				204078422CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift in Sources */,
 				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,
 				204078352CFF4E42002147EC /* RouterView.swift in Sources */,
+				204078452CFF6A65002147EC /* ProvinsiModel.swift in Sources */,
+				2040784D2CFF6CEA002147EC /* DaerahErrorEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
