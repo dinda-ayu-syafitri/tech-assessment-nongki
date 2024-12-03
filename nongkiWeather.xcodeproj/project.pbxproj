@@ -6,17 +6,26 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		204078232CFF4CCF002147EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2040781D2CFF4CCF002147EC /* Preview Assets.xcassets */; };
+		204078242CFF4CCF002147EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2040781F2CFF4CCF002147EC /* Assets.xcassets */; };
+		204078252CFF4CCF002147EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078202CFF4CCF002147EC /* ContentView.swift */; };
+		204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078212CFF4CCF002147EC /* nongkiWeatherApp.swift */; };
+		2040782C2CFF4D30002147EC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040782B2CFF4D30002147EC /* Router.swift */; };
+		204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078302CFF4DAA002147EC /* RouteEnum.swift */; };
+		204078352CFF4E42002147EC /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078342CFF4E42002147EC /* RouterView.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2040780B2CFF3E49002147EC /* nongkiWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nongkiWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2040781D2CFF4CCF002147EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2040781F2CFF4CCF002147EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		204078202CFF4CCF002147EC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		204078212CFF4CCF002147EC /* nongkiWeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nongkiWeatherApp.swift; sourceTree = "<group>"; };
+		2040782B2CFF4D30002147EC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		204078302CFF4DAA002147EC /* RouteEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteEnum.swift; sourceTree = "<group>"; };
+		204078342CFF4E42002147EC /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		2040780D2CFF3E49002147EC /* nongkiWeather */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = nongkiWeather;
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		204078082CFF3E49002147EC /* Frameworks */ = {
@@ -32,7 +41,7 @@
 		204078022CFF3E49002147EC = {
 			isa = PBXGroup;
 			children = (
-				2040780D2CFF3E49002147EC /* nongkiWeather */,
+				204078222CFF4CCF002147EC /* nongkiWeather */,
 				2040780C2CFF3E49002147EC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,6 +52,76 @@
 				2040780B2CFF3E49002147EC /* nongkiWeather.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2040781E2CFF4CCF002147EC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2040781D2CFF4CCF002147EC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		204078222CFF4CCF002147EC /* nongkiWeather */ = {
+			isa = PBXGroup;
+			children = (
+				2040782D2CFF4D85002147EC /* Domain */,
+				204078292CFF4D11002147EC /* Presentation */,
+				204078272CFF4CD9002147EC /* Common */,
+				2040781E2CFF4CCF002147EC /* Preview Content */,
+				2040781F2CFF4CCF002147EC /* Assets.xcassets */,
+				204078212CFF4CCF002147EC /* nongkiWeatherApp.swift */,
+			);
+			path = nongkiWeather;
+			sourceTree = "<group>";
+		};
+		204078272CFF4CD9002147EC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		204078292CFF4D11002147EC /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				204078202CFF4CCF002147EC /* ContentView.swift */,
+				2040782A2CFF4D1A002147EC /* Router */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2040782A2CFF4D1A002147EC /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				2040782B2CFF4D30002147EC /* Router.swift */,
+				204078342CFF4E42002147EC /* RouterView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		2040782D2CFF4D85002147EC /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				2040782E2CFF4D8D002147EC /* Entities */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2040782E2CFF4D8D002147EC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2040782F2CFF4D95002147EC /* Enum */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		2040782F2CFF4D95002147EC /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				204078302CFF4DAA002147EC /* RouteEnum.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,9 +138,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				2040780D2CFF3E49002147EC /* nongkiWeather */,
 			);
 			name = nongkiWeather;
 			packageProductDependencies = (
@@ -109,6 +185,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204078232CFF4CCF002147EC /* Preview Assets.xcassets in Resources */,
+				204078242CFF4CCF002147EC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				204078252CFF4CCF002147EC /* ContentView.swift in Sources */,
+				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
+				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,
+				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,
+				204078352CFF4E42002147EC /* RouterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

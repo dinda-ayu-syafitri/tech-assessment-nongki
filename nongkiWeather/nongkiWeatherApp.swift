@@ -11,7 +11,9 @@ import SwiftUI
 struct nongkiWeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RouterView {
+                ContentView()
+            }
         }
     }
 }
