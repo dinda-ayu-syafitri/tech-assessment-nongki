@@ -27,7 +27,23 @@ class DaerahRemoteDataSource: DaerahRemoteDataSourceProtocol {
         }
     }
 
-    func getAllKota() async throws -> [Kota] {
-        return []
+    func getAllKota(idProvinsi: String) async throws -> [Kota] {
+        let endpoint = "https://api.binderbyte.com/wilayah/kabupaten?api_key=89df9fc43e242aa6ef9caa1009adcb12dd49ddaad0d128cf5f9a3f160c1e7206&id_provinsi=\(idProvinsi)"
+
+        guard let url = URL(string: endpoint) else { throw DaerahError.invalidURL }
+
+        let (value, response) = try await URLSession.shared.data(from: url)
+
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else { throw DaerahError.invalidResponse }
+
+        do {
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let apiResponse = try decoder.decode(APIResponse<[Kota]>.self, from: value)
+            return apiResponse.value
+        } catch {
+            print("Decoding failed with error:", error)
+            throw DaerahError.invalidData
+        }
     }
 }

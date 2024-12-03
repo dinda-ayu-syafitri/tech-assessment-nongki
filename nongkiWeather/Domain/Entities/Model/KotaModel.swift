@@ -9,6 +9,6 @@ import Foundation
 
 struct Kota: Codable {
     var id: String
-    var id_provinsi: String
+    var idProvinsi: String
     var name: String
 }

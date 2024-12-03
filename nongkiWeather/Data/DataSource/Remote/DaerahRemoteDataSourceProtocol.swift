@@ -9,5 +9,5 @@ import Foundation
 
 protocol DaerahRemoteDataSourceProtocol {
     func getAllProvinsi() async throws -> [Provinsi]
-    func getAllKota() async throws -> [Kota]
+    func getAllKota(idProvinsi: String) async throws -> [Kota]
 }
