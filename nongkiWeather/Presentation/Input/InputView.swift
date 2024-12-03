@@ -29,6 +29,16 @@ struct InputView: View {
                 Text("Kota")
                 SearchableDropdown(selectedOption: "Depok", options: ["Depok", "Bogor"])
             }
+
+            Button(action: {}, label: {
+                Text("Proses")
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(.blue)
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .foregroundStyle(.white)
+
+            })
             Spacer()
         }
         .padding(20)
