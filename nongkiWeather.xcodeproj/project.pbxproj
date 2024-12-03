@@ -14,6 +14,8 @@
 		2040782C2CFF4D30002147EC /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040782B2CFF4D30002147EC /* Router.swift */; };
 		204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078302CFF4DAA002147EC /* RouteEnum.swift */; };
 		204078352CFF4E42002147EC /* RouterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078342CFF4E42002147EC /* RouterView.swift */; };
+		204078382CFF4EE1002147EC /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078372CFF4EE1002147EC /* InputView.swift */; };
+		2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040783C2CFF5E84002147EC /* SearchableDropdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		2040782B2CFF4D30002147EC /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		204078302CFF4DAA002147EC /* RouteEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteEnum.swift; sourceTree = "<group>"; };
 		204078342CFF4E42002147EC /* RouterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterView.swift; sourceTree = "<group>"; };
+		204078372CFF4EE1002147EC /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		2040783C2CFF5E84002147EC /* SearchableDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchableDropdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 		204078292CFF4D11002147EC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				204078392CFF5E41002147EC /* Component */,
+				204078362CFF4EBD002147EC /* Input */,
 				204078202CFF4CCF002147EC /* ContentView.swift */,
 				2040782A2CFF4D1A002147EC /* Router */,
 			);
@@ -122,6 +128,22 @@
 				204078302CFF4DAA002147EC /* RouteEnum.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		204078362CFF4EBD002147EC /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				204078372CFF4EE1002147EC /* InputView.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		204078392CFF5E41002147EC /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				2040783C2CFF5E84002147EC /* SearchableDropdown.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,8 +220,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				204078252CFF4CCF002147EC /* ContentView.swift in Sources */,
+				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
 				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
 				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,
+				204078382CFF4EE1002147EC /* InputView.swift in Sources */,
 				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,
 				204078352CFF4E42002147EC /* RouterView.swift in Sources */,
 			);

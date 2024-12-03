@@ -1,0 +1,40 @@
+//
+//  InputView.swift
+//  nongkiWeather
+//
+//  Created by Dinda Ayu Syafitri on 03/12/24.
+//
+
+import SwiftUI
+
+struct InputView: View {
+    var body: some View {
+        VStack(spacing: 32) {
+            VStack(alignment: .leading) {
+                Text("Nama")
+                TextField("Masukkan nama anda", text: .constant(""))
+                    .padding()
+                    .background {
+                        RoundedRectangle(cornerRadius: 8)
+                            .stroke(lineWidth: 1)
+                    }
+            }
+
+            VStack(alignment: .leading) {
+                Text("Provinsi")
+                SearchableDropdown(selectedOption: "Jawa Barat", options: ["Jawa Barat", "DKI Jakarta"])
+            }
+
+            VStack(alignment: .leading) {
+                Text("Kota")
+                SearchableDropdown(selectedOption: "Depok", options: ["Depok", "Bogor"])
+            }
+            Spacer()
+        }
+        .padding(20)
+    }
+}
+
+#Preview {
+    InputView()
+}
