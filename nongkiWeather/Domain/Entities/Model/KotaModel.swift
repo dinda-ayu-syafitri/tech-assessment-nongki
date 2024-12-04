@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Kota: Codable {
+struct Kota: Codable, Equatable, Identifiable, Hashable {
     var id: String
     var idProvinsi: String
     var name: String

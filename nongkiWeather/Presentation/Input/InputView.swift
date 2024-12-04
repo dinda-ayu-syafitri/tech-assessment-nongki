@@ -24,12 +24,20 @@ struct InputView: View {
 
             VStack(alignment: .leading) {
                 Text("Provinsi")
-                SearchableDropdown(selectedOption: "Jawa Barat", options: ["Jawa Barat", "DKI Jakarta"])
+                SearchableDropdown(
+                    selectedOption: $vm.selectedProvinsi,
+                    options: vm.provinsi,
+                    displayKey: \.name
+                )
             }
 
             VStack(alignment: .leading) {
                 Text("Kota")
-                SearchableDropdown(selectedOption: "Depok", options: ["Depok", "Bogor"])
+                SearchableDropdown(
+                    selectedOption: $vm.selectedKota,
+                    options: vm.kota,
+                    displayKey: \.name
+                )
             }
 
             Button(action: {}, label: {
@@ -46,18 +54,15 @@ struct InputView: View {
         .padding(20)
         .onAppear(perform: {
             Task {
-                do {
-                    let kota = try await DaerahRemoteDataSource().getAllKota(idProvinsi: "31")
-                    print("Ini Kota", kota)
-                } catch DaerahError.invalidURL {
-                    print("Invalid URL")
-                } catch DaerahError.invalidResponse {
-                    print("Invalid Response")
-                } catch DaerahError.invalidData {
-                    print("Invalid Data")
-                }
+                try await vm.getProvinsi()
             }
         })
+        .onChange(of: vm.selectedProvinsi) {
+            Task {
+                vm.selectedKota = nil
+                try await vm.getKota(idProvinsi: vm.selectedProvinsi?.id ?? "")
+            }
+        }
     }
 }
 

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Provinsi: Codable {
+struct Provinsi: Codable, Equatable, Identifiable, Hashable {
     var id: String
     var name: String
 }

@@ -19,10 +19,17 @@ class InputViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var provinsi: [Provinsi] = []
     @Published var kota: [Kota] = []
+    @Published var selectedProvinsi: Provinsi?
+    @Published var selectedKota: Kota?
 
     func getProvinsi() async throws {
         do {
-            provinsi = try await getAllProvinsiUseCase.execute()
+            let provinsiData = try await getAllProvinsiUseCase.execute()
+            var newProv: [Provinsi] = []
+            for p in provinsiData {
+                newProv.append(p)
+            }
+            provinsi = newProv
         } catch DaerahError.invalidURL {
             print("Invalid URL", Error.self)
             throw DaerahError.invalidURL
@@ -37,7 +44,12 @@ class InputViewModel: ObservableObject {
 
     func getKota(idProvinsi: String) async throws {
         do {
-            kota = try await getAllKotaUseCase.execute(idProvinsi: idProvinsi)
+            let kotaData = try await getAllKotaUseCase.execute(idProvinsi: idProvinsi)
+            var newKota: [Kota] = []
+            for k in kotaData {
+                newKota.append(k)
+            }
+            kota = newKota
         } catch DaerahError.invalidURL {
             print("Invalid URL", Error.self)
             throw DaerahError.invalidURL

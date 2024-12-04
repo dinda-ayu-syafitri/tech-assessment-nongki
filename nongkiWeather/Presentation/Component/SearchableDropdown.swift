@@ -7,17 +7,19 @@
 
 import SwiftUI
 
-struct SearchableDropdown: View {
+struct SearchableDropdown<T: Identifiable & Hashable>: View {
     @State var isExpanded = false
-    @State var selectedOption: String
+    @Binding var selectedOption: T?
     @State var searchText = ""
-    @State var options: [String]
 
-    var filteredOptions: [String] {
+    var options: [T]
+    var displayKey: KeyPath<T, String>
+
+    var filteredOptions: [T] {
         if searchText.isEmpty {
             return options
         } else {
-            return options.filter { $0.lowercased().contains(searchText.lowercased()) }
+            return options.filter { $0[keyPath: displayKey].lowercased().contains(searchText.lowercased()) }
         }
     }
 
@@ -25,7 +27,7 @@ struct SearchableDropdown: View {
         VStack {
             Button(action: { isExpanded.toggle() }) {
                 HStack {
-                    Text(selectedOption)
+                    Text(selectedOption?[keyPath: displayKey] ?? "Pilih")
                     Spacer()
                     Image(systemName: isExpanded ? "chevron.up" : "chevron.down")
                 }
@@ -43,24 +45,24 @@ struct SearchableDropdown: View {
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .padding()
 
-                    ForEach(filteredOptions, id: \.self) { option in
-                        Text(option)
-                            .padding()
-                            .onTapGesture {
-                                selectedOption = option
-                                isExpanded = false
-                            }
+                    ScrollView {
+                        ForEach(filteredOptions, id: \.self) { option in
+                            Text(option[keyPath: displayKey])
+                                .padding()
+                                .onTapGesture {
+                                    selectedOption = option
+                                    isExpanded = false
+                                }
+                        }
                     }
                 }
                 .background(Color.white)
                 .cornerRadius(8)
                 .shadow(radius: 5)
+                .frame(maxHeight: 500)
+                .zIndex(10)
             }
         }
         .foregroundStyle(.black)
     }
-}
-
-#Preview {
-    SearchableDropdown(selectedOption: "1", options: ["1", "2"])
 }
