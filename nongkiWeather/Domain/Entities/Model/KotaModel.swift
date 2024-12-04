@@ -11,4 +11,10 @@ struct Kota: Codable, Equatable, Identifiable, Hashable {
     var id: String
     var idProvinsi: String
     var name: String
+
+    init(id: String, idProvinsi: String, name: String) {
+        self.id = id
+        self.idProvinsi = idProvinsi
+        self.name = name
+    }
 }

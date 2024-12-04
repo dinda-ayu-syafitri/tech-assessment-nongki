@@ -28,6 +28,13 @@
 		204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */; };
 		2040785B2CFFDEC1002147EC /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040785A2CFFDEC1002147EC /* InputViewModel.swift */; };
 		2040785E2CFFE0DA002147EC /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040785D2CFFE0DA002147EC /* DependencyInjection.swift */; };
+		204078602CFFFA79002147EC /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040785F2CFFFA79002147EC /* UserModel.swift */; };
+		204078632CFFFAE6002147EC /* UserLocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078622CFFFAE6002147EC /* UserLocalDataSourceProtocol.swift */; };
+		204078652CFFFB3F002147EC /* UserLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078642CFFFB3F002147EC /* UserLocalDataSource.swift */; };
+		204078672D000063002147EC /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078662D000063002147EC /* UserRepositoryProtocol.swift */; };
+		204078692D000084002147EC /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078682D000084002147EC /* UserRepository.swift */; };
+		2040786B2D0003D8002147EC /* GetUserDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */; };
+		2040786D2D00044D002147EC /* SaveUserDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +60,13 @@
 		204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllKotaUseCase.swift; sourceTree = "<group>"; };
 		2040785A2CFFDEC1002147EC /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 		2040785D2CFFE0DA002147EC /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		2040785F2CFFFA79002147EC /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		204078622CFFFAE6002147EC /* UserLocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSourceProtocol.swift; sourceTree = "<group>"; };
+		204078642CFFFB3F002147EC /* UserLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocalDataSource.swift; sourceTree = "<group>"; };
+		204078662D000063002147EC /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
+		204078682D000084002147EC /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataUseCase.swift; sourceTree = "<group>"; };
+		2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserDataUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +202,7 @@
 		2040783F2CFF68EC002147EC /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
+				204078612CFFFACE002147EC /* Local */,
 				204078402CFF68FE002147EC /* Remote */,
 			);
 			path = DataSource;
@@ -208,6 +223,7 @@
 				204078442CFF6A65002147EC /* ProvinsiModel.swift */,
 				204078462CFF6B08002147EC /* KotaModel.swift */,
 				2040784E2CFF74DB002147EC /* APIResponse.swift */,
+				2040785F2CFFFA79002147EC /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +233,8 @@
 			children = (
 				204078512CFFCE2C002147EC /* DaerahRepositoryProtocol.swift */,
 				204078532CFFCE4A002147EC /* DaerahRepository.swift */,
+				204078662D000063002147EC /* UserRepositoryProtocol.swift */,
+				204078682D000084002147EC /* UserRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -226,6 +244,8 @@
 			children = (
 				204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */,
 				204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */,
+				2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */,
+				2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -236,6 +256,15 @@
 				2040785D2CFFE0DA002147EC /* DependencyInjection.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		204078612CFFFACE002147EC /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				204078622CFFFAE6002147EC /* UserLocalDataSourceProtocol.swift */,
+				204078642CFFFB3F002147EC /* UserLocalDataSource.swift */,
+			);
+			path = Local;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,8 +342,10 @@
 			files = (
 				204078252CFF4CCF002147EC /* ContentView.swift in Sources */,
 				204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */,
+				2040786B2D0003D8002147EC /* GetUserDataUseCase.swift in Sources */,
 				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
 				2040785E2CFFE0DA002147EC /* DependencyInjection.swift in Sources */,
+				204078632CFFFAE6002147EC /* UserLocalDataSourceProtocol.swift in Sources */,
 				204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */,
 				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
 				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,
@@ -323,12 +354,17 @@
 				204078382CFF4EE1002147EC /* InputView.swift in Sources */,
 				2040784F2CFF74DB002147EC /* APIResponse.swift in Sources */,
 				204078422CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift in Sources */,
+				204078652CFFFB3F002147EC /* UserLocalDataSource.swift in Sources */,
+				204078692D000084002147EC /* UserRepository.swift in Sources */,
 				204078542CFFCE4A002147EC /* DaerahRepository.swift in Sources */,
+				2040786D2D00044D002147EC /* SaveUserDataUseCase.swift in Sources */,
 				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,
 				204078352CFF4E42002147EC /* RouterView.swift in Sources */,
 				204078452CFF6A65002147EC /* ProvinsiModel.swift in Sources */,
 				2040785B2CFFDEC1002147EC /* InputViewModel.swift in Sources */,
+				204078672D000063002147EC /* UserRepositoryProtocol.swift in Sources */,
 				204078522CFFCE2C002147EC /* DaerahRepositoryProtocol.swift in Sources */,
+				204078602CFFFA79002147EC /* UserModel.swift in Sources */,
 				2040784D2CFF6CEA002147EC /* DaerahErrorEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

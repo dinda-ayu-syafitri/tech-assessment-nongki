@@ -14,7 +14,7 @@ struct InputView: View {
         VStack(spacing: 32) {
             VStack(alignment: .leading) {
                 Text("Nama")
-                TextField("Masukkan nama anda", text: .constant(""))
+                TextField("Masukkan nama anda", text: $vm.name)
                     .padding()
                     .background {
                         RoundedRectangle(cornerRadius: 8)
@@ -40,7 +40,15 @@ struct InputView: View {
                 )
             }
 
-            Button(action: {}, label: {
+            Button(action: {
+                Task {
+                    do {
+                        try vm.saveUser()
+                    } catch {
+                        print("Error saving user: \(error)")
+                    }
+                }
+            }, label: {
                 Text("Proses")
                     .padding()
                     .frame(maxWidth: .infinity)
@@ -55,6 +63,7 @@ struct InputView: View {
         .onAppear(perform: {
             Task {
                 try await vm.getProvinsi()
+                try vm.getUser()
             }
         })
         .onChange(of: vm.selectedProvinsi) {

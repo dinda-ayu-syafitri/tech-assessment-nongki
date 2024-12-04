@@ -10,10 +10,14 @@ import Foundation
 class InputViewModel: ObservableObject {
     private let getAllProvinsiUseCase: GetAllProvinsiUseCase
     private let getAllKotaUseCase: GetAllKotaUseCase
+    private let getUserDataUseCase: GetUserDataUseCase
+    private let saveUserDataUseCase: SaveUserDataUseCase
 
-    init(getAllProvinsiUseCase: GetAllProvinsiUseCase, getAllKotaUseCase: GetAllKotaUseCase) {
+    init(getAllProvinsiUseCase: GetAllProvinsiUseCase, getAllKotaUseCase: GetAllKotaUseCase, getUserDataUseCase: GetUserDataUseCase, saveUserDataUseCase: SaveUserDataUseCase) {
         self.getAllProvinsiUseCase = getAllProvinsiUseCase
         self.getAllKotaUseCase = getAllKotaUseCase
+        self.getUserDataUseCase = getUserDataUseCase
+        self.saveUserDataUseCase = saveUserDataUseCase
     }
 
     @Published var name: String = ""
@@ -60,5 +64,23 @@ class InputViewModel: ObservableObject {
             print("Invalid Data", Error.self)
             throw DaerahError.invalidData
         }
+    }
+
+    func getUser() throws {
+        let userData = try getUserDataUseCase.execute()
+        print(userData?.name)
+        print(userData?.kota.name)
+        print(userData?.provinsi.name)
+    }
+
+    @MainActor
+    func saveUser() throws {
+        let user = User(
+            name: name,
+            provinsi: selectedProvinsi ?? Provinsi(id: "0", name: ""),
+            kota: selectedKota ?? Kota(id: "0", idProvinsi: "0", name: "")
+        )
+
+        try saveUserDataUseCase.execute(user: user)
     }
 }
