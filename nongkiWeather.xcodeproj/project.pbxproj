@@ -35,6 +35,7 @@
 		204078692D000084002147EC /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078682D000084002147EC /* UserRepository.swift */; };
 		2040786B2D0003D8002147EC /* GetUserDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */; };
 		2040786D2D00044D002147EC /* SaveUserDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */; };
+		204078702D001E20002147EC /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786F2D001E20002147EC /* WeatherView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		204078682D000084002147EC /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataUseCase.swift; sourceTree = "<group>"; };
 		2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserDataUseCase.swift; sourceTree = "<group>"; };
+		2040786F2D001E20002147EC /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		204078292CFF4D11002147EC /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				2040786E2D001DF7002147EC /* Weather */,
 				204078392CFF5E41002147EC /* Component */,
 				204078362CFF4EBD002147EC /* Input */,
 				204078202CFF4CCF002147EC /* ContentView.swift */,
@@ -267,6 +270,14 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		2040786E2D001DF7002147EC /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				2040786F2D001E20002147EC /* WeatherView.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -346,6 +357,7 @@
 				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
 				2040785E2CFFE0DA002147EC /* DependencyInjection.swift in Sources */,
 				204078632CFFFAE6002147EC /* UserLocalDataSourceProtocol.swift in Sources */,
+				204078702D001E20002147EC /* WeatherView.swift in Sources */,
 				204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */,
 				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
 				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,

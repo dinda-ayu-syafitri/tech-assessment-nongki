@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InputView: View {
     @StateObject var vm = DependencyInjection.shared.inputViewModel()
+    @EnvironmentObject private var router: Router
 
     var body: some View {
         VStack(spacing: 32) {
@@ -44,6 +45,7 @@ struct InputView: View {
                 Task {
                     do {
                         try vm.saveUser()
+                        router.navigateTo(.weatherPage)
                     } catch {
                         print("Error saving user: \(error)")
                     }
