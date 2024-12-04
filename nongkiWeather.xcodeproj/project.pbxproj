@@ -26,6 +26,7 @@
 		204078542CFFCE4A002147EC /* DaerahRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078532CFFCE4A002147EC /* DaerahRepository.swift */; };
 		204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */; };
 		204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */; };
+		2040785B2CFFDEC1002147EC /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040785A2CFFDEC1002147EC /* InputViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		204078532CFFCE4A002147EC /* DaerahRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahRepository.swift; sourceTree = "<group>"; };
 		204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProvinsiUseCase.swift; sourceTree = "<group>"; };
 		204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllKotaUseCase.swift; sourceTree = "<group>"; };
+		2040785A2CFFDEC1002147EC /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				204078372CFF4EE1002147EC /* InputView.swift */,
+				2040785A2CFFDEC1002147EC /* InputViewModel.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,
 				204078352CFF4E42002147EC /* RouterView.swift in Sources */,
 				204078452CFF6A65002147EC /* ProvinsiModel.swift in Sources */,
+				2040785B2CFFDEC1002147EC /* InputViewModel.swift in Sources */,
 				204078522CFFCE2C002147EC /* DaerahRepositoryProtocol.swift in Sources */,
 				2040784D2CFF6CEA002147EC /* DaerahErrorEnum.swift in Sources */,
 			);

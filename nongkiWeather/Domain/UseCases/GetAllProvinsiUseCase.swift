@@ -20,7 +20,6 @@ class GetAllProvinsiUseCaseImpl: GetAllProvinsiUseCase {
 
     func execute() async throws -> [Provinsi] {
         let provinsi = try await DaerahRepository.getAllProvinsi()
-
         return provinsi
     }
 }
