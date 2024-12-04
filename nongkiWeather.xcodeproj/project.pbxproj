@@ -22,6 +22,10 @@
 		204078492CFF6B69002147EC /* DaerahRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078482CFF6B69002147EC /* DaerahRemoteDataSource.swift */; };
 		2040784D2CFF6CEA002147EC /* DaerahErrorEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040784C2CFF6CEA002147EC /* DaerahErrorEnum.swift */; };
 		2040784F2CFF74DB002147EC /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040784E2CFF74DB002147EC /* APIResponse.swift */; };
+		204078522CFFCE2C002147EC /* DaerahRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078512CFFCE2C002147EC /* DaerahRepositoryProtocol.swift */; };
+		204078542CFFCE4A002147EC /* DaerahRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078532CFFCE4A002147EC /* DaerahRepository.swift */; };
+		204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */; };
+		204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,10 @@
 		204078482CFF6B69002147EC /* DaerahRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahRemoteDataSource.swift; sourceTree = "<group>"; };
 		2040784C2CFF6CEA002147EC /* DaerahErrorEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahErrorEnum.swift; sourceTree = "<group>"; };
 		2040784E2CFF74DB002147EC /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		204078512CFFCE2C002147EC /* DaerahRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahRepositoryProtocol.swift; sourceTree = "<group>"; };
+		204078532CFFCE4A002147EC /* DaerahRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaerahRepository.swift; sourceTree = "<group>"; };
+		204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProvinsiUseCase.swift; sourceTree = "<group>"; };
+		204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllKotaUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +130,7 @@
 		2040782D2CFF4D85002147EC /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				204078552CFFDCC4002147EC /* UseCases */,
 				2040782E2CFF4D8D002147EC /* Entities */,
 			);
 			path = Domain;
@@ -164,6 +173,7 @@
 		2040783E2CFF68E0002147EC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				204078502CFFCE05002147EC /* Repository */,
 				2040783F2CFF68EC002147EC /* DataSource */,
 			);
 			path = Data;
@@ -194,6 +204,24 @@
 				2040784E2CFF74DB002147EC /* APIResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		204078502CFFCE05002147EC /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				204078512CFFCE2C002147EC /* DaerahRepositoryProtocol.swift */,
+				204078532CFFCE4A002147EC /* DaerahRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		204078552CFFDCC4002147EC /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */,
+				204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,7 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				204078252CFF4CCF002147EC /* ContentView.swift in Sources */,
+				204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */,
 				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
+				204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */,
 				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
 				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,
 				204078472CFF6B08002147EC /* KotaModel.swift in Sources */,
@@ -278,9 +308,11 @@
 				204078382CFF4EE1002147EC /* InputView.swift in Sources */,
 				2040784F2CFF74DB002147EC /* APIResponse.swift in Sources */,
 				204078422CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift in Sources */,
+				204078542CFFCE4A002147EC /* DaerahRepository.swift in Sources */,
 				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,
 				204078352CFF4E42002147EC /* RouterView.swift in Sources */,
 				204078452CFF6A65002147EC /* ProvinsiModel.swift in Sources */,
+				204078522CFFCE2C002147EC /* DaerahRepositoryProtocol.swift in Sources */,
 				2040784D2CFF6CEA002147EC /* DaerahErrorEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
