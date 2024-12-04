@@ -12,14 +12,14 @@ protocol GetAllProvinsiUseCase {
 }
 
 class GetAllProvinsiUseCaseImpl: GetAllProvinsiUseCase {
-    private let DaerahRepository: DaerahRepository
+    private let daerahRepository: DaerahRepository
 
-    init(DaerahRepository: DaerahRepository) {
-        self.DaerahRepository = DaerahRepository
+    init(daerahRepository: DaerahRepository) {
+        self.daerahRepository = daerahRepository
     }
 
     func execute() async throws -> [Provinsi] {
-        let provinsi = try await DaerahRepository.getAllProvinsi()
+        let provinsi = try await daerahRepository.getAllProvinsi()
         return provinsi
     }
 }

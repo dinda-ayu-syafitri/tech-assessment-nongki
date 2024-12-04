@@ -27,6 +27,7 @@
 		204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */; };
 		204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */; };
 		2040785B2CFFDEC1002147EC /* InputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040785A2CFFDEC1002147EC /* InputViewModel.swift */; };
+		2040785E2CFFE0DA002147EC /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040785D2CFFE0DA002147EC /* DependencyInjection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		204078562CFFDD02002147EC /* GetAllProvinsiUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllProvinsiUseCase.swift; sourceTree = "<group>"; };
 		204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllKotaUseCase.swift; sourceTree = "<group>"; };
 		2040785A2CFFDEC1002147EC /* InputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewModel.swift; sourceTree = "<group>"; };
+		2040785D2CFFE0DA002147EC /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		204078272CFF4CD9002147EC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2040785C2CFFE0C8002147EC /* Utils */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -227,6 +230,14 @@
 			path = UseCases;
 			sourceTree = "<group>";
 		};
+		2040785C2CFFE0C8002147EC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				2040785D2CFFE0DA002147EC /* DependencyInjection.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -303,6 +314,7 @@
 				204078252CFF4CCF002147EC /* ContentView.swift in Sources */,
 				204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */,
 				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
+				2040785E2CFFE0DA002147EC /* DependencyInjection.swift in Sources */,
 				204078572CFFDD02002147EC /* GetAllProvinsiUseCase.swift in Sources */,
 				2040782C2CFF4D30002147EC /* Router.swift in Sources */,
 				204078312CFF4DAA002147EC /* RouteEnum.swift in Sources */,

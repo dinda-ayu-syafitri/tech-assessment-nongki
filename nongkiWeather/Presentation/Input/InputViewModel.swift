@@ -16,6 +16,7 @@ class InputViewModel: ObservableObject {
         self.getAllKotaUseCase = getAllKotaUseCase
     }
 
+    @Published var name: String = ""
     @Published var provinsi: [Provinsi] = []
     @Published var kota: [Kota] = []
 

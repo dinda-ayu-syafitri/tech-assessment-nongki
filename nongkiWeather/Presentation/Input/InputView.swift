@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InputView: View {
+    @StateObject var vm = DependencyInjection.shared.inputViewModel()
+
     var body: some View {
         VStack(spacing: 32) {
             VStack(alignment: .leading) {
