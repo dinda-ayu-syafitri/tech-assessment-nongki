@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct WeatherView: View {
+    @StateObject var vm = DependencyInjection.shared.weatherViewModel()
+
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
                 Text("Selamat Siang")
-                Text("Bambang")
+                Text("\(vm.userName)")
             }
 
             VStack(alignment: .leading) {
@@ -34,6 +36,9 @@ struct WeatherView: View {
                 }
             }
         }
+        .onAppear(perform: {
+            vm.getUserData()
+        })
     }
 }
 

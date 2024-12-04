@@ -36,6 +36,9 @@
 		2040786B2D0003D8002147EC /* GetUserDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */; };
 		2040786D2D00044D002147EC /* SaveUserDataUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */; };
 		204078702D001E20002147EC /* WeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2040786F2D001E20002147EC /* WeatherView.swift */; };
+		207C14142D00212900D4DF9B /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207C14132D00212900D4DF9B /* WeatherViewModel.swift */; };
+		207C14162D003DD600D4DF9B /* KotaLatLongModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207C14152D003DD600D4DF9B /* KotaLatLongModel.swift */; };
+		207C14182D0049E000D4DF9B /* GetKotaLatLonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207C14172D0049E000D4DF9B /* GetKotaLatLonUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +72,9 @@
 		2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserDataUseCase.swift; sourceTree = "<group>"; };
 		2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserDataUseCase.swift; sourceTree = "<group>"; };
 		2040786F2D001E20002147EC /* WeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherView.swift; sourceTree = "<group>"; };
+		207C14132D00212900D4DF9B /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		207C14152D003DD600D4DF9B /* KotaLatLongModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KotaLatLongModel.swift; sourceTree = "<group>"; };
+		207C14172D0049E000D4DF9B /* GetKotaLatLonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetKotaLatLonUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,7 @@
 				204078462CFF6B08002147EC /* KotaModel.swift */,
 				2040784E2CFF74DB002147EC /* APIResponse.swift */,
 				2040785F2CFFFA79002147EC /* UserModel.swift */,
+				207C14152D003DD600D4DF9B /* KotaLatLongModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +256,7 @@
 				204078582CFFDE4B002147EC /* GetAllKotaUseCase.swift */,
 				2040786A2D0003D8002147EC /* GetUserDataUseCase.swift */,
 				2040786C2D00044D002147EC /* SaveUserDataUseCase.swift */,
+				207C14172D0049E000D4DF9B /* GetKotaLatLonUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -274,6 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				2040786F2D001E20002147EC /* WeatherView.swift */,
+				207C14132D00212900D4DF9B /* WeatherViewModel.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -353,6 +362,7 @@
 			files = (
 				204078252CFF4CCF002147EC /* ContentView.swift in Sources */,
 				204078592CFFDE4C002147EC /* GetAllKotaUseCase.swift in Sources */,
+				207C14162D003DD600D4DF9B /* KotaLatLongModel.swift in Sources */,
 				2040786B2D0003D8002147EC /* GetUserDataUseCase.swift in Sources */,
 				2040783D2CFF5E84002147EC /* SearchableDropdown.swift in Sources */,
 				2040785E2CFFE0DA002147EC /* DependencyInjection.swift in Sources */,
@@ -368,6 +378,8 @@
 				204078422CFF69CC002147EC /* DaerahRemoteDataSourceProtocol.swift in Sources */,
 				204078652CFFFB3F002147EC /* UserLocalDataSource.swift in Sources */,
 				204078692D000084002147EC /* UserRepository.swift in Sources */,
+				207C14142D00212900D4DF9B /* WeatherViewModel.swift in Sources */,
+				207C14182D0049E000D4DF9B /* GetKotaLatLonUseCase.swift in Sources */,
 				204078542CFFCE4A002147EC /* DaerahRepository.swift in Sources */,
 				2040786D2D00044D002147EC /* SaveUserDataUseCase.swift in Sources */,
 				204078262CFF4CCF002147EC /* nongkiWeatherApp.swift in Sources */,

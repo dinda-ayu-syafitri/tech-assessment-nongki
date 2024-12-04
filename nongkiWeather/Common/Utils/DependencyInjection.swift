@@ -26,11 +26,16 @@ class DependencyInjection: ObservableObject {
 
     lazy var getAllProvinsiUseCase = GetAllProvinsiUseCaseImpl(daerahRepository: daerahRepository)
     lazy var getAllKotaUseCase = GetAllKotaUseCaseImpl(daerahRepository: daerahRepository)
+    lazy var getKotaLatLongUseCase = GetKotaLatLonUseCaseImpl(daerahRepository: daerahRepository)
 
     lazy var getUserDataUseCase = GetUserDataUseCaseImpl(userRepository: userRepository)
     lazy var saveUserDataUseCase = SaveUserDataUseCaseImpl(userRepository: userRepository)
 
     func inputViewModel() -> InputViewModel {
-        InputViewModel(getAllProvinsiUseCase: getAllProvinsiUseCase, getAllKotaUseCase: getAllKotaUseCase, getUserDataUseCase: getUserDataUseCase, saveUserDataUseCase: saveUserDataUseCase)
+        InputViewModel(getAllProvinsiUseCase: getAllProvinsiUseCase, getAllKotaUseCase: getAllKotaUseCase, getUserDataUseCase: getUserDataUseCase, saveUserDataUseCase: saveUserDataUseCase, getKotaLatLongUseCase: getKotaLatLongUseCase)
+    }
+
+    func weatherViewModel() -> WeatherViewModel {
+        WeatherViewModel(getUserDataUseCase: getUserDataUseCase)
     }
 }

@@ -10,4 +10,5 @@ import Foundation
 protocol DaerahRepositoryProtocol {
     func getAllProvinsi() async throws -> [Provinsi]
     func getAllKota(idProvinsi: String) async throws -> [Kota]
+    func getKotaLatLong(kota: String) async throws -> KotaLatLong
 }

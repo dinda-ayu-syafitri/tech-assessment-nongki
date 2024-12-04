@@ -23,4 +23,9 @@ class DaerahRepository: DaerahRepositoryProtocol {
         let remoteKotaData = try await daerahRemoteDataSource.getAllKota(idProvinsi: idProvinsi)
         return remoteKotaData
     }
+
+    func getKotaLatLong(kota: String) async throws -> KotaLatLong {
+        let remoteKotaLatLongData = try await daerahRemoteDataSource.getKotaLatLong(kota: kota)
+        return remoteKotaLatLongData
+    }
 }

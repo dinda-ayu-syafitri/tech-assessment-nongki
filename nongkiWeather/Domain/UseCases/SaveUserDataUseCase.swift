@@ -24,7 +24,9 @@ class SaveUserDataUseCaseImpl: SaveUserDataUseCase {
                 id: user.id,
                 name: user.name,
                 provinsi: user.provinsi,
-                kota: user.kota
+                kota: user.kota,
+                lat: user.lat,
+                lon: user.lon
             )
 
             try userRepository.saveUserData(user: updatedUser)

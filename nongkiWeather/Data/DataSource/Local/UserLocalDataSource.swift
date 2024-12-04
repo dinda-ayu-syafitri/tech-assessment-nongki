@@ -30,6 +30,8 @@ class UserLocalDataSource: UserLocalDataSourceProtocol {
             existingUser.name = user.name
             existingUser.provinsi = user.provinsi
             existingUser.kota = user.kota
+            existingUser.lat = user.lat
+            existingUser.lon = user.lon
         } else {
             modelContext.insert(user)
         }

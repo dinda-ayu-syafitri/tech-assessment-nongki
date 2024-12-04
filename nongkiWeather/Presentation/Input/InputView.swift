@@ -59,6 +59,13 @@ struct InputView: View {
                     .foregroundStyle(.white)
 
             })
+            .alert(isPresented: $vm.latLongNotFound) {
+                Alert(
+                    title: Text("Perkiraan cuaca untuk lokasi ini belum tersedia"),
+                    message: Text("Coba pilih lokasi lain untuk mendapatkan perkiraan cuaca"),
+                    dismissButton: .cancel(Text("Pilih lokasi lain"))
+                )
+            }
             Spacer()
         }
         .padding(20)
@@ -74,9 +81,17 @@ struct InputView: View {
                 try await vm.getKota(idProvinsi: vm.selectedProvinsi?.id ?? "")
             }
         }
+        .onChange(of: vm.selectedKota) {
+            Task {
+                print(vm.selectedKota)
+                try await vm.getKotaLatLong()
+            }
+        }
     }
 }
 
 #Preview {
-    InputView()
+    RouterView {
+        InputView()
+    }
 }

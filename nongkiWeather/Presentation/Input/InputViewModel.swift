@@ -12,12 +12,14 @@ class InputViewModel: ObservableObject {
     private let getAllKotaUseCase: GetAllKotaUseCase
     private let getUserDataUseCase: GetUserDataUseCase
     private let saveUserDataUseCase: SaveUserDataUseCase
+    private let getKotaLatLongUseCase: GetKotaLatLonUseCase
 
-    init(getAllProvinsiUseCase: GetAllProvinsiUseCase, getAllKotaUseCase: GetAllKotaUseCase, getUserDataUseCase: GetUserDataUseCase, saveUserDataUseCase: SaveUserDataUseCase) {
+    init(getAllProvinsiUseCase: GetAllProvinsiUseCase, getAllKotaUseCase: GetAllKotaUseCase, getUserDataUseCase: GetUserDataUseCase, saveUserDataUseCase: SaveUserDataUseCase, getKotaLatLongUseCase: GetKotaLatLonUseCase) {
         self.getAllProvinsiUseCase = getAllProvinsiUseCase
         self.getAllKotaUseCase = getAllKotaUseCase
         self.getUserDataUseCase = getUserDataUseCase
         self.saveUserDataUseCase = saveUserDataUseCase
+        self.getKotaLatLongUseCase = getKotaLatLongUseCase
     }
 
     @Published var name: String = ""
@@ -25,6 +27,9 @@ class InputViewModel: ObservableObject {
     @Published var kota: [Kota] = []
     @Published var selectedProvinsi: Provinsi?
     @Published var selectedKota: Kota?
+    @Published var lat = 0.0
+    @Published var lon = 0.0
+    @Published var latLongNotFound: Bool = false
 
     func getProvinsi() async throws {
         do {
@@ -66,6 +71,21 @@ class InputViewModel: ObservableObject {
         }
     }
 
+    func getKotaLatLong() async throws {
+        let kotaName = selectedKota?.name ?? ""
+        let formattedKotaName = kotaName.replacingOccurrences(of: "KAB. ", with: "").replacingOccurrences(of: "KOTA ", with: "")
+
+        do {
+            let latLon = try await getKotaLatLongUseCase.execute(kota: formattedKotaName)
+            lat = latLon.lat
+            lon = latLon.lon
+            print("lat found")
+        } catch {
+            latLongNotFound = true
+            print("Input VM ")
+        }
+    }
+
     func getUser() throws {
         let userData = try getUserDataUseCase.execute()
         print(userData?.name)
@@ -78,8 +98,16 @@ class InputViewModel: ObservableObject {
         let user = User(
             name: name,
             provinsi: selectedProvinsi ?? Provinsi(id: "0", name: ""),
-            kota: selectedKota ?? Kota(id: "0", idProvinsi: "0", name: "")
+            kota: selectedKota ?? Kota(id: "0", idProvinsi: "0", name: ""),
+            lat: lat,
+            lon: lon
         )
+
+        print(user.name)
+        print(user.kota.name)
+        print(user.provinsi.name)
+        print(user.lat)
+        print(user.lon)
 
         try saveUserDataUseCase.execute(user: user)
     }
